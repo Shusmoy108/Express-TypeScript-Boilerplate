@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express'
-
+import { User } from '../models/user';
 const router = express.Router()
 
 router.get('/api/', async (req: Request, res: Response) => {
@@ -10,7 +10,8 @@ router.post('/api/', async (req: Request, res: Response) => {
   const { email, password } = req.body;
   console.log(email);
   console.log(password);
-
+  const user = User.build({ email, password })
+  await user.save()
   return res.status(201).send({ "msg": "Hello world from post" })
 })
 
