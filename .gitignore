@@ -4,6 +4,7 @@
 *.log*
 
 # Node files #
+package-lock.json
 node_modules/
 src/settings/config.ts
 npm-debug.log
