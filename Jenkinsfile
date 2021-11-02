@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-      label 'windows'
+      
       image 'mcr.microsoft.com/powershell'
       args '-p 3000:3000'
     }
