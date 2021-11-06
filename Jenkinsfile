@@ -29,7 +29,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'hello world'
-                bat 'npm start &'
+                bat 'nodemon'
 
             }
         }

@@ -1,3 +1,3 @@
-//mongo database Url
-const dbUrl: string = "";
-export { dbUrl as dbUrl }
+// mongo database Url
+const dbUrl = '';
+export { dbUrl as dbUrl };

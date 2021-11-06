@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
 interface UserFields {
   email: string;
@@ -6,7 +6,7 @@ interface UserFields {
 }
 
 interface UserModelInterface extends mongoose.Model<UserDoc> {
-  build(attr: UserFields): UserDoc
+  build(attr: UserFields): UserDoc;
 }
 
 interface UserDoc extends mongoose.Document {
@@ -17,23 +17,23 @@ interface UserDoc extends mongoose.Document {
 const UserSchema = new mongoose.Schema({
     email: {
     type: String,
-    required: true
+    required: true,
   },
   password: {
-    type: String, 
-    required: true
-  }
-})
+    type: String,
+    required: true,
+  },
+});
 
 UserSchema.statics.build = (attr: UserFields) => {
-  return new User(attr)
-}
+  return new User(attr);
+};
 
-const User = mongoose.model<UserDoc, UserModelInterface>('User', UserSchema)
+const User = mongoose.model<UserDoc, UserModelInterface>('User', UserSchema);
 
 User.build({
     email: 'some email',
-    password: 'some password'
-})
+    password: 'some password',
+});
 
-export { User }
+export { User };
