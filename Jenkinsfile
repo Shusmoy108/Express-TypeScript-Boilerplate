@@ -23,11 +23,13 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'npm install'
+                 echo 'hello world build'
             }
         }
         stage('Test') {
             steps {
-                bat 'nohup npm start &'
+                echo 'hello world'
+                bat 'npm start &'
 
             }
         }
