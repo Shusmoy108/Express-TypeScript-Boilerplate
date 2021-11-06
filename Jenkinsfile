@@ -1,7 +1,7 @@
 pipeline {
     agent any
     
-//   tools {nodejs "node"}
+  tools {nodejs "node"}
     // agent {
     //     docker {
       
@@ -16,9 +16,9 @@ pipeline {
     // environment {
     //     CI = 'true'
     // }
-     environment {
-        CI = 'true'
-    }
+    //  environment {
+    //     CI = 'true'
+    // }
     stages {
         stage('Build') {
             steps {
