@@ -30,7 +30,8 @@ pipeline {
             steps {
                 echo 'hello world'
                 bat 'npm start'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                set /p choice= "Please Select one of the above options :" 
+                echo '%choice%'
 
             }
         }
