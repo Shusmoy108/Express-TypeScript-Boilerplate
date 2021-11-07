@@ -30,7 +30,7 @@ pipeline {
             steps {
                 echo 'hello world'
                 bat 'npm start'
-                set /p choice= "Please Select one of the above options :" 
+                bat 'set /p choice= "Please Select one of the above options :"' 
                 echo '%choice%'
 
             }
