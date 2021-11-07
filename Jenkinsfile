@@ -22,7 +22,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'npm install'
+                sh 'npm install'
                  echo 'hello world build'
             }
         }
@@ -31,7 +31,7 @@ pipeline {
                 echo 'hello world'
                  bat 'set /p choice= "Please Select one of the above options :"' 
                  echo '%choice%'
-                bat 'npm start'
+                 bat 'npm start'
                
                
 
