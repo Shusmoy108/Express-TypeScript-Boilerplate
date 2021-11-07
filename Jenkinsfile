@@ -30,6 +30,7 @@ pipeline {
             steps {
                 echo 'hello world'
                 bat 'npm start'
+                input message: 'Finished using the web site? (Click "Proceed" to continue)'
 
             }
         }
