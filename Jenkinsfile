@@ -26,7 +26,7 @@ pipeline {
                  echo 'hello world build'
             }
         }
-        stage('Test') {
+        stage('Deliver') {
             steps {
                 echo 'hello world'
                 bat 'npm start'
