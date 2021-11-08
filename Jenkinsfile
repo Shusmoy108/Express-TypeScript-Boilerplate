@@ -29,9 +29,9 @@ pipeline {
         stage('Deliver') {
             steps {
                 echo 'hello world'
-                 bat 'set /p choice= "Please Select one of the above options :"' 
-                 echo '%choice%'
-                 bat 'npm start'
+                 //bat 'set /p choice= "Please Select one of the above options :"' 
+                 //echo '%choice%'
+                 sh 'npm start'
                
                
 
